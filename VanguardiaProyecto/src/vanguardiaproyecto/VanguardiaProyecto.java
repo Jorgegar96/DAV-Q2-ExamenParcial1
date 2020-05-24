@@ -10,6 +10,7 @@ import FifaFactory.*;
 import SpotifySingleton.SpotifySingleton;
 import EventPlanningBuilder.*;
 import JSONAdapter.*;
+import UserState.*;
 
 /**
  *
@@ -22,7 +23,7 @@ public class VanguardiaProyecto {
      */
     public static void main(String[] args) {
         
-        /*
+        
         
        //Implementacion de instanciad de Spotify con Singleton
         SpotifySingleton();
@@ -35,11 +36,13 @@ public class VanguardiaProyecto {
         
         //Implementacion de Event Builder
         EventBuilder();
-
-        */
         
         //Implementacion de JSON Adapter
         JSONAdapter();
+        
+        //Implementavcion de Application User State
+        AppUserState();
+        
     }
     
     public static void SpotifySingleton(){
@@ -98,7 +101,7 @@ public class VanguardiaProyecto {
         instagramPage.registerObserver(new Follower("Martín Hernández",27));
         
         instagramPage.addPost("Foto del muro de Berlín");
-        instagramPage.addPost("Video del Roatán");
+        instagramPage.addPost("Video de Roatán");
         instagramPage.addPost("Foto de Pasteles");
         
         System.out.println("-----------------------------------------------\n");
@@ -125,13 +128,29 @@ public class VanguardiaProyecto {
         
         //Implementacion de JSON Adapter
         
+        System.out.println(
+                "***Ejemplo de Super Carro Almacendo en Formato de Objeto***"
+        );
         SuperCar superCar = new SuperCar(400, "R8", "2019", true);
         System.out.println(superCar.toString());
         
+        System.out.println("Modificando el estado del carro...\n");
         superCar.setFitToRace(false);
         System.out.println(superCar.toString());
         
+        System.out.println(
+                "***Ejemplo de Carro Deportivo Almacendo en Formato de Objeto***"
+        );
+        SportsCar sportsCar = new SportsCar(260, "Camaro", "2016", true);
+        System.out.println(sportsCar.toString());
         
+        System.out.println("Modificando el estado del carro...\n");
+        sportsCar.setFitToRace(false);
+        System.out.println(sportsCar.toString());
+        
+        System.out.println(
+                "***Ejemplo de Carro Almacendo en Formato JSON***"
+        );
         String JSONCar = (
                 "{\n"
                 + "'maxSpeed':'300',\n"
@@ -143,8 +162,40 @@ public class VanguardiaProyecto {
         RacingCarAdapter rca = new RacingCarAdapter(new JSONFormatRacingCar(JSONCar));
         System.out.println(rca.toString());
         
+        System.out.println("Modificando el estado del carro...\n");
         rca.setFitToRace(false);
         System.out.println(rca.toString());
+        
+        System.out.println("-----------------------------------------------\n");
+    }
+    
+    public static void AppUserState(){
+        
+        System.out.println("Application User State:\n");
+        
+        //Implementavcion de Application User State
+        ApplicationContext context = new ApplicationContext();
+        
+        System.out.println(
+                "***Ejemplo de Usuario con acceso Completo Habilitado***"
+        );
+        context.setState(new EnabledState());
+        context.userAction();
+        System.out.println("");
+        
+        System.out.println(
+                "***Ejemplo de Usuario con acceso Limitado***"
+        );
+        context.setState(new LimitedState());
+        context.userAction();
+        System.out.println("");
+        
+        System.out.println(
+                "***Ejemplo de Usuario con acceso Deshabilitado***"
+        );
+        context.setState(new DisabledState());
+        context.userAction();
+        System.out.println("");
         
         System.out.println("-----------------------------------------------\n");
     }

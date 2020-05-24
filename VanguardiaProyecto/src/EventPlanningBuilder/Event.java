@@ -21,7 +21,7 @@ public class Event {
     @Override
     public String toString() {
         return (
-            "Datos del Evento:\n" +
+            "***Datos del Evento***\n" +
             "Nombre del Evento: " + this.name + "\n" +
             "Número de Mesas: " + this.tableQuantity + "\n" +
             "Color Principal: " + this.getMainColorString() + "\n" +
