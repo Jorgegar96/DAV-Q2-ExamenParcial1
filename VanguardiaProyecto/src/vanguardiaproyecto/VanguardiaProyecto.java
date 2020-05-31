@@ -9,9 +9,8 @@ import FifaFactory.*;
 import InstagramObserver.*;
 import EventPlanningBuilder.*;
 import JSONAdapter.*;
-/*
 import UserState.*;
-/*
+
 /**
  *
  * @author jorge
@@ -39,10 +38,10 @@ public class VanguardiaProyecto {
         
         //Implementacion de JSON Adapter
         JSONAdapter();
-        /*
+        
         //Implementavcion de Application User State
         AppUserState();
-        */
+       
     }
     
     public static void SpotifySingleton(){
@@ -168,7 +167,7 @@ public class VanguardiaProyecto {
         
         System.out.println("-----------------------------------------------\n");
     }
-    /*
+    
     public static void AppUserState(){
         
         System.out.println("Application User State:\n");
@@ -199,5 +198,5 @@ public class VanguardiaProyecto {
         
         System.out.println("-----------------------------------------------\n");
     }
-    */
+    
 }
