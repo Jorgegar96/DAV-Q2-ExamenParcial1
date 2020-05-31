@@ -8,8 +8,8 @@ import SpotifySingleton.SpotifySingleton;
 import FifaFactory.*;
 import InstagramObserver.*;
 import EventPlanningBuilder.*;
-/*
 import JSONAdapter.*;
+/*
 import UserState.*;
 /*
 /**
@@ -36,10 +36,10 @@ public class VanguardiaProyecto {
         
         //Implementacion de Event Builder
         EventBuilder();
-        /*
+        
         //Implementacion de JSON Adapter
         JSONAdapter();
-        
+        /*
         //Implementavcion de Application User State
         AppUserState();
         */
@@ -121,7 +121,7 @@ public class VanguardiaProyecto {
         
         System.out.println("-----------------------------------------------\n");
     }
-    /*
+    
     public static void JSONAdapter(){
         
         System.out.println("JSON Racing Car Adapter: \n");
@@ -168,7 +168,7 @@ public class VanguardiaProyecto {
         
         System.out.println("-----------------------------------------------\n");
     }
-    
+    /*
     public static void AppUserState(){
         
         System.out.println("Application User State:\n");
