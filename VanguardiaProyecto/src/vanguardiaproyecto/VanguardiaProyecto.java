@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package vanguardiaproyecto;
-import InstagramObserver.Follower;
-import InstagramObserver.InstagramPage;
-import FifaFactory.*;
 import SpotifySingleton.SpotifySingleton;
+/*
+import InstagramObserver.*;
+import FifaFactory.*;
 import EventPlanningBuilder.*;
 import JSONAdapter.*;
 import UserState.*;
-
+/*
 /**
  *
  * @author jorge
@@ -27,7 +27,7 @@ public class VanguardiaProyecto {
         
        //Implementacion de instanciad de Spotify con Singleton
         SpotifySingleton();
-       
+       /*
         //Implementacion de Creacion de jugador de fifa con Factory
         PlayerFactory();
         
@@ -42,7 +42,7 @@ public class VanguardiaProyecto {
         
         //Implementavcion de Application User State
         AppUserState();
-        
+        */
     }
     
     public static void SpotifySingleton(){
@@ -55,7 +55,7 @@ public class VanguardiaProyecto {
         System.out.println("-----------------------------------------------\n");
     }
     
-    
+    /*
     public static void PlayerFactory(){
         
         System.out.println("Fifa Player Factory:");
@@ -199,4 +199,5 @@ public class VanguardiaProyecto {
         
         System.out.println("-----------------------------------------------\n");
     }
+    */
 }
