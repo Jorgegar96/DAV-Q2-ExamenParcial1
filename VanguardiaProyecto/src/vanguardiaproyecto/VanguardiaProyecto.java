@@ -7,8 +7,8 @@ package vanguardiaproyecto;
 import SpotifySingleton.SpotifySingleton;
 import FifaFactory.*;
 import InstagramObserver.*;
-/*
 import EventPlanningBuilder.*;
+/*
 import JSONAdapter.*;
 import UserState.*;
 /*
@@ -33,10 +33,10 @@ public class VanguardiaProyecto {
         
         //Implementacion de Instagram con Observer
         InstagramObserver();
-        /*
+        
         //Implementacion de Event Builder
         EventBuilder();
-        
+        /*
         //Implementacion de JSON Adapter
         JSONAdapter();
         
@@ -106,7 +106,7 @@ public class VanguardiaProyecto {
         
         System.out.println("-----------------------------------------------\n");
     }
-    /*
+    
     public static void EventBuilder(){
         
         System.out.println("Event Builder: ");
@@ -121,7 +121,7 @@ public class VanguardiaProyecto {
         
         System.out.println("-----------------------------------------------\n");
     }
-    
+    /*
     public static void JSONAdapter(){
         
         System.out.println("JSON Racing Car Adapter: \n");
